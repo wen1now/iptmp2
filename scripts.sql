@@ -8,7 +8,7 @@ create table Users (
 	pointer varchar(6) not null,
 	picture varchar(255) not null,
 	primary key (userid)
-)
+);
 
 create table Rooms (
 	roomid unsigned integer auto_increment not null,
@@ -18,7 +18,7 @@ create table Rooms (
 	capacity smallint not null,
 	primary key (roomid),
 	foreign key (owner) references Users(userid)
-)
+);
 
 create table Characters (
 	userid unsigned integer not null,
@@ -26,10 +26,10 @@ create table Characters (
 	ypoint integer not null,
 	xpoint integer not null,
 	picture varchar(255) not null,
-	primary key (userid,roomid),
+	primary key (userid, roomid),
 	foreign key (userid) references Users(userid),
 	foreign key (roomid) references Rooms(roomid)
-)
+);
 
 create table Boards (
 	imageid unsigned integer not null,
@@ -43,7 +43,7 @@ create table Boards (
 	primary key (imageid),
 	foreign key (owner) references Users(userid),
 	foreign key (roomid) references Rooms(roomid)	
-)
+);
 
 create table Messages (
 	messageid unsigned integer not null,
@@ -55,13 +55,38 @@ create table Messages (
 	primary key (messageid),
 	foreign key (userid) references Users(userid),
 	foreign key (roomid) references Rooms(roomid)
-)
+);
 
 create table Aliases (
 	aliasid unsigned integer not null,
 	displayname varchar(31) not null,
 	textcolour varchar(6) not null,
 	roomid unsigned integer not null,
-	owner
-)
+	owner unsigned integer not null,
+	primary key (aliasid),
+	foreign key (owner) references Users(userid),
+	foreign key (roomid) references Rooms(roomid)
+);
 
+create table Notes (
+	noteid unsigned integer not null,
+	title varchar(31) not null,
+	private boolean not null,
+	blurb text not null,
+	roomid unsigned integer not null,
+	owner unsigned integer not null,
+	primary key (noteid),
+	foreign key (owner) references Users(userid),
+	foreign key (roomid) references Rooms(roomid)
+);
+
+create table Images (
+	userid unsigned integer not null,
+	image varchar(255) not null,
+	primary key (userid, image),
+	foreign key (userid) references Users(userid)
+)
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1cfc1903fdf6e90d53f0a6924ea3ec86297defb0
