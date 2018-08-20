@@ -64,4 +64,4 @@ create table Aliases (
 	roomid unsigned integer not null,
 	owner
 )
-piuxdrxcfvgbhnjm
+
