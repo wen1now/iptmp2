@@ -59,5 +59,8 @@ create table Messages (
 
 create table Aliases (
 	aliasid unsigned integer not null,
-	
+	displayname varchar(31) not null,
+	textcolour varchar(6) not null,
+	roomid unsigned integer not null,
+	owner
 )
