@@ -31,7 +31,7 @@ create table Characters (
 	foreign key (roomid) references Rooms(roomid)
 );
 
-create table Boards (
+create table Boardimages (
 	imageid unsigned integer not null,
 	roomid unsigned integer not null,
 	owner unsigned integer not null,
@@ -86,7 +86,4 @@ create table Images (
 	primary key (userid, image),
 	foreign key (userid) references Users(userid)
 )
-<<<<<<< HEAD
 
-=======
->>>>>>> 1cfc1903fdf6e90d53f0a6924ea3ec86297defb0
