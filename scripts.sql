@@ -72,7 +72,7 @@ create table Notes (
 	noteid unsigned integer not null,
 	title varchar(31) not null,
 	private boolean not null,
-	blurb varchar(255) not null,
+	blurb text not null,
 	roomid unsigned integer not null,
 	owner unsigned integer not null,
 	primary key (noteid),
