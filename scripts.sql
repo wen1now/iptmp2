@@ -51,7 +51,7 @@ create table Messages (
 	userid unsigned integer not null,
 	alias varchar(31) not null,
 	send_date date not null,
-	blurb varchar(255) not null,
+	blurb text not null,
 	primary key (messageid),
 	foreign key (userid) references Users(userid),
 	foreign key (roomid) references Rooms(roomid)
