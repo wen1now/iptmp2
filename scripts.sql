@@ -2,7 +2,7 @@
 create database CriticalMiss;
 
 create table Users (
-	userid unsigned integer auto_increment not null,
+	userid integer unsigned auto_increment not null,
 	hash varchar(255) not null,
 	username varchar(31) not null,
 	pointer varchar(6) not null,
@@ -11,18 +11,18 @@ create table Users (
 );
 
 create table Rooms (
-	roomid unsigned integer auto_increment not null,
+	roomid integer unsigned auto_increment not null,
 	roomname varchar(31) not null,
 	owner integer not null,
-	key varchar(31) not null,
+	keyphrase varchar(31) not null,
 	capacity smallint not null,
 	primary key (roomid),
 	foreign key (owner) references Users(userid)
 );
 
 create table Characters (
-	userid unsigned integer not null,
-	roomid unsigned integer not null,
+	userid integer unsigned not null,
+	roomid integer unsigned not null,
 	ypoint integer not null,
 	xpoint integer not null,
 	picture varchar(255) not null,
@@ -32,9 +32,9 @@ create table Characters (
 );
 
 create table Boardimages (
-	imageid unsigned integer not null,
-	roomid unsigned integer not null,
-	owner unsigned integer not null,
+	imageid integer unsigned not null,
+	roomid integer unsigned not null,
+	owner integer unsigned not null,
 	stack_order integer not null,
 	x integer not null,
 	y integer not null,
@@ -46,9 +46,9 @@ create table Boardimages (
 );
 
 create table Messages (
-	messageid unsigned integer not null,
-	roomid unsigned integer not null,
-	userid unsigned integer not null,
+	messageid integer unsigned not null,
+	roomid integer unsigned not null,
+	userid integer unsigned not null,
 	alias varchar(31) not null,
 	send_date date not null,
 	blurb text not null,
@@ -58,32 +58,34 @@ create table Messages (
 );
 
 create table Aliases (
-	aliasid unsigned integer not null,
+	aliasid integer unsigned not null,
 	displayname varchar(31) not null,
 	textcolour varchar(6) not null,
-	roomid unsigned integer not null,
-	owner unsigned integer not null,
+	roomid integer unsigned not null,
+	owner integer unsigned not null,
 	primary key (aliasid),
 	foreign key (owner) references Users(userid),
 	foreign key (roomid) references Rooms(roomid)
 );
 
 create table Notes (
-	noteid unsigned integer not null,
+	noteid integer unsigned not null,
 	title varchar(31) not null,
 	private boolean not null,
 	blurb text not null,
-	roomid unsigned integer not null,
-	owner unsigned integer not null,
+	roomid integer unsigned not null,
+	owner integer unsigned not null,
 	primary key (noteid),
 	foreign key (owner) references Users(userid),
 	foreign key (roomid) references Rooms(roomid)
 );
 
 create table Images (
-	userid unsigned integer not null,
+	userid integer unsigned not null,
 	image varchar(255) not null,
 	primary key (userid, image),
 	foreign key (userid) references Users(userid)
 )
+
+
 
