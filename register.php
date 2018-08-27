@@ -11,7 +11,7 @@ session_start()
 	<form name="letmein" method="post" action="register.php">
 		Username: <input type="text" name="username"><br>
 		Password: <input type="password" name="password"><br>
-		<input type="submit" value="register">
+		<input type="submit" name="submit">
 	</form>
 <?php
 
@@ -29,16 +29,14 @@ if (isset($_POST['submit'])){
 		.$username
 		.'","'
 		.$password
-		.'","000000","")';//insert picture filepath
+		.'","ffffff","")';//insert picture filepath
 
 	//execute
 	if (mysqli_query($connection,$qry))
-   		{ echo 'Addition successful'; }
+   		{ echo 'Registration successful'; }
 	else
    		{ echo 'Error detected; please try again - '.mysqli_error(); }
 
-	//see all data
-	echo '<p><a href="viewallsoldiers.php">See all the minions</p>';
 
 }
 ?>
