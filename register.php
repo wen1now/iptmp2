@@ -29,7 +29,7 @@ if (isset($_POST['submit'])){
 		.$username
 		.'","'
 		.$password
-		.'","ffffff","")';//insert picture filepath
+		.'","ffffff","default.jpg")';//insert picture filepath
 
 	//execute
 	if (mysqli_query($connection,$qry))
