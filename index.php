@@ -9,8 +9,13 @@ session_start()
 </head>
 <body>
 	<h3>Critical Miss</h3>
-	<input type="button" name="Log In">
-	<input type="button" name="Create account">
+	<form name="gotologin" method="post" action="login.php">
+		<input type="submit" name="Log In" value="Log In">
+	</form>
+	
+	<form name="gotoregister" method="post" action="register.php">
+		<input type="submit" name="Create Account" value="Create Account">
+	</form>
 
 </body>
 </html>
