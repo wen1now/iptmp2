@@ -7,7 +7,7 @@ session_start()
 	<title>Register</title>
 </head>
 <body>
-	<h2>Critical Miss</h2>
+	<h2>Critical Miss: REGISTER</h2>
 	<form name="letmein" method="post" action="register.php">
 		Username: <input type="text" name="username"><br>
 		Password: <input type="password" name="password"><br>

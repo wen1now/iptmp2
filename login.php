@@ -7,7 +7,7 @@ session_start()
 	<title>Log in</title>
 </head>
 <body>
-	<h2>Critical Miss</h2>
+	<h2>Critical Miss: LOGIN</h2>
 	<form name="letmein" method="post" action="login.php">
 		Username: <input type="text" name="username"><br>
 		Password: <input type="password" name="password"><br>
