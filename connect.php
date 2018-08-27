@@ -1,8 +1,8 @@
 <?php
 /* set the connections to the database */
 $host     = 'localhost';
-$username = 'critical';
-$passwd   = 'miss';
+$username = 'root';
+$passwd   = '';
 $dbname   = 'CriticalMiss';
 
 /* build a bridge to the server */
