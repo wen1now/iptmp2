@@ -38,7 +38,7 @@ create table Boardimages (
 	stack_order integer not null,
 	x integer not null,
 	y integer not null,
-	ground boolean not null,
+	ground bit not null,
 	picture varchar(255) not null,
 	primary key(imageid),
 	foreign key(owner) references Users(userid),
@@ -71,7 +71,7 @@ create table Aliases (
 create table Notes (
 	noteid integer unsigned not null,
 	title varchar(31) not null,
-	private boolean not null,
+	private bit not null,
 	blurb text not null,
 	roomid integer unsigned not null,
 	owner integer unsigned not null,
