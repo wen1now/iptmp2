@@ -38,8 +38,7 @@ if (isset($_POST['submit'])){
 	$data = mysqli_query($connection,$qry);
 	if (mysqli_num_rows($data) != 0)
    		{
-   		echo mysqli_fetch_row($data)[0];
-   		$_SESSION["username"] = $_POST["username"];
+   		$_SESSION["userid"] = mysqli_fetch_row($data)[0];
    		header("LOCATION: menu.php");}
 	else
    		{ echo 'Either your username or password was incorrect :('; }

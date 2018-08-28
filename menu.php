@@ -4,6 +4,7 @@
 <style> 
 body {
     background-image: url("images/bgroundtiles.jpg");
+    color: white;
 }
 </style>
 </head>
