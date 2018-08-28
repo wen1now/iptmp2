@@ -5,6 +5,11 @@ session_start()
 <html>
 <head>
 	<title>Log in</title>
+	<style> 
+body {
+    background-image: url("images/bgroundtiles.jpg");
+}
+</style>
 </head>
 <body>
 <center>

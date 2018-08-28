@@ -14,12 +14,11 @@ body {
 	</form>
 	
 	<form name="gofindroom" method="post" action="">
-		<input type="submit" name="Create Account" value="Create Account">
-	</form>
+		<input type="submit" name="Create Account" value="Find Room">
+	</form>>
 
 	<form name="gocollection" method="post" action="">
-		<input type="submit" name="Create Account" value="Create Account">
-	</form>
-
+		<input type="submit" name="Create Account" value="Create Room">
+	</form
 </body>
 </html>

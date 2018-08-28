@@ -10,6 +10,7 @@ body {
     background-image: url("images/bgroundtiles.jpg");
 }
 </style>
+<center>
 </head>
 <body background="bgroundtiles.jpg">
 	<h2><font color="ffffff">Critical Miss</font></h2>
@@ -20,6 +21,6 @@ body {
 	<form name="gotoregister" method="post" action="register.php">
 		<input type="submit" name="Create Account" value="Create Account">
 	</form>
-
+</center>
 </body>
 </html>
