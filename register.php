@@ -39,7 +39,9 @@ if (isset($_POST['submit'])){
 
 	//execute
 	if (mysqli_query($connection,$qry))
-   		{ echo 'Registration successful'; }
+   		{ echo 'Registration successful';
+   		$_session['username'] = $username;
+   		header("LOCATION: menu.php");}
 	else
    		{ echo 'Error detected; please try again - '.mysqli_error(); }
 
