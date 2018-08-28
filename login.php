@@ -7,10 +7,11 @@ session_start()
 	<title>Log in</title>
 </head>
 <body>
-	<h2>Critical Miss: LOGIN</h2>
+<center>
+	<h2><font color="ffffff">Critical Miss: LOGIN</font> </h2>
 	<form name="letmein" method="post" action="login.php">
-		Username: <input type="text" name="username"><br>
-		Password: <input type="password" name="password"><br>
+		<font color="ffffff">Username:</font> <input type="text" name="username"><br>
+		<font color="ffffff">Password:</font> <input type="password" name="password"><br>
 		<input type="submit" value="Log In" name="submit">
 	</form>
 
@@ -34,7 +35,7 @@ if (isset($_POST['submit'])){
    		{
    		echo mysqli_fetch_row($data)[0];
    		$_SESSION["username"] = $_POST["username"];
-   		header("LOCATION: register.php");}
+   		header("LOCATION: menu.php");}
 	else
    		{ echo 'Either your username or password was incorrect :('; }
 
@@ -42,5 +43,6 @@ if (isset($_POST['submit'])){
 
 }
 ?>
+</center>
 </body>
 </html>

@@ -5,10 +5,14 @@ session_start()
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Critical Miss</title>
+<style> 
+body {
+    background-image: url("images/bgroundtiles.jpg");
+}
+</style>
 </head>
-<body>
-	<h3>Critical Miss</h3>
+<body background="bgroundtiles.jpg">
+	<h2><font color="ffffff">Critical Miss</font></h2>
 	<form name="gotologin" method="post" action="login.php">
 		<input type="submit" name="Log In" value="Log In">
 	</form>
