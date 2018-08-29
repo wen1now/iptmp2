@@ -18,15 +18,15 @@ session_start()
 		}
 ?>
 	<center>
-	<form name="letmein" method="post" action="register.php">
+	<form name="registerform" method="post" action="register.php">
 		<span class="preformatted">Username:</span><input type="text" name="username"><br>
 		<span class="preformatted">Password:</span><input type="password" name="password"><br>
-		<input type="submit" name="submit">
+		<input type="submit" name="submitregister">
 	</form>
 <?php
 
 
-if (isset($_POST['submit'])){
+if (isset($_POST['submitregister'])){
 	//user HAS posted data
 	//connect to the db
 	require ('connect.php');

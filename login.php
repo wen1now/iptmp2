@@ -13,14 +13,6 @@ session_start()
 	<?php
 	if (isset($_SESSION['userid'])){
 		include('menuitems.php');
-		/*echo '<h2>Critical Miss: Menu</font></h2></div>
-		<div id="leftbar">
-			<div class="menuitem" onclick="location.href=\'logout.php\';" id="topmenuitem" >Logout</a></div>
-			<div class="menuitem" onclick="location.href=\'create.php\';">Create room</div>
-			<div class="menuitem" onclick="location.href=\'find.php\';">Find room</div>
-			<div class="menuitem" onclick="location.href=\'about.php\';">About</div>
-			<div class="menuitem" onclick="location.href=\'reportbug.php\';">Report a bug</div>
-		';*/
 	} else {
 		include('menuitemsnotloggedin.php');
 		}
@@ -29,12 +21,11 @@ session_start()
 	<form name="letmein" method="post" action="login.php">
 		<span class="preformatted">Username:</span><input type="text" name="username"><br>
 		<span class="preformatted">Password:</span><input type="password" name="password"><br>
-		<input type="submit" value="Log In" name="submit">
+		<input type="submit" value="Log In" name="submitlogin">
 	</form>
 
 <?php
-if (isset($_POST['submit'])){
-
+if (isset($_POST['submitlogin'])){
 	//user HAS posted data
 	//connect to the db
 	require ('connect.php');
