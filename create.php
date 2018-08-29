@@ -7,11 +7,10 @@
 	<title>Create Room</title>
 </head>
 <body>
-<<<<<<< HEAD
 	<?php
 	if (isset($_SESSION['userid'])){
 		$username = $_SESSION['userid'];
-		echo '<div id="titlestuff">Register</font></div>';
+		echo '<div id="titlestuff">Create room</font></div>';
 		include('menuitems.php');
 		/*echo '<h2>Critical Miss: Menu</font></h2></div>
 		<div id="leftbar">
@@ -27,10 +26,6 @@
 		echo "<script type='text/javascript'>alert('".$message."');window.location.href='login.php';</script>";
 		}
 	?>
-=======
-	<center>
-		<h2><font color="ffffff">Room Create</font></h2>
->>>>>>> f37a0d7121234906aa950bbe2dd9eade331eb4be
 		<form name="letmein" method="post" action="register.php">
 			<font>Room Name:</font> <input type="text" name="roomname"><br>
 			<font>Room Key:</font> <input type="password" name="roomkey"><br>
