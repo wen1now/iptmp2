@@ -9,7 +9,7 @@ session_start()
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="titlestuff">Critical Miss: Login</font></div>
+	<div id="titlestuff">Login</font></div>
 	<?php
 	if (isset($_SESSION['userid'])){
 		include('menuitems.php');

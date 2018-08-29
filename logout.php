@@ -12,6 +12,5 @@ session_start();
 	$message = "Logout successful; you will be redirected";
 	echo "<script type='text/javascript'>alert('".$message."');window.location.href='index.php';</script>";
 	?>
-
 </body>
 </html>

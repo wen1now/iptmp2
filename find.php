@@ -22,7 +22,7 @@ session_start();
 		';*/
 	} else {
 		//redirect user to login
-		$message = "You are not logged in; login or register to view this page";
+		$message = "You are not logged in; login to view this page";
 		echo "<script type='text/javascript'>alert('".$message."');window.location.href='login.php';</script>";
 		}
 	?>
