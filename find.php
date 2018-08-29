@@ -10,7 +10,7 @@ session_start();
 	<?php
 	if (isset($_SESSION['userid'])){
 		$username = $_SESSION['userid'];
-		echo '<div id="titlestuff">Critical Miss: Room select</font></div>';
+		echo '<div id="titlestuff">Room select</font></div>';
 		include('menuitems.php');
 		/*echo '<h2>Critical Miss: Menu</font></h2></div>
 		<div id="leftbar">

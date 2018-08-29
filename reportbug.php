@@ -7,7 +7,7 @@ session_start();
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="titlestuff">Critical Miss: Report a bug</div>
+	<div id="titlestuff">Report A Bug</div>
 	<?php
 	if (isset($_SESSION['userid'])){
 		include('menuitems.php');

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<center>
-		<h2><font color="ffffff">Critical Miss: REGISTER</font></h2>
+		<h2><font color="ffffff">Room Create</font></h2>
 		<form name="letmein" method="post" action="register.php">
 			<font color="ffffff">Room Name:</font> <input type="text" name="roomname"><br>
 			<font color="ffffff">Room Key:</font> <input type="password" name="roomkey"><br>
