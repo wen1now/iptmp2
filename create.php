@@ -7,12 +7,34 @@
 	<title>Create Room</title>
 </head>
 <body>
+<<<<<<< HEAD
+	<?php
+	if (isset($_SESSION['userid'])){
+		$username = $_SESSION['userid'];
+		echo '<div id="titlestuff">Register</font></div>';
+		include('menuitems.php');
+		/*echo '<h2>Critical Miss: Menu</font></h2></div>
+		<div id="leftbar">
+			<div class="menuitem" onclick="location.href=\'logout.php\';" id="topmenuitem" >Logout</a></div>
+			<div class="menuitem" onclick="location.href=\'create.php\';">Create room</div>
+			<div class="menuitem" onclick="location.href=\'find.php\';">Find room</div>
+			<div class="menuitem" onclick="location.href=\'about.php\';">About</div>
+			<div class="menuitem" onclick="location.href=\'reportbug.php\';">Report a bug</div>
+		';*/
+	} else {
+		//redirect user to login
+		$message = "You are not logged in; login to view this page";
+		echo "<script type='text/javascript'>alert('".$message."');window.location.href='login.php';</script>";
+		}
+	?>
+=======
 	<center>
-		<h2><font color="ffffff">Critical Miss: REGISTER</font></h2>
+		<h2><font color="ffffff">Room Create</font></h2>
+>>>>>>> f37a0d7121234906aa950bbe2dd9eade331eb4be
 		<form name="letmein" method="post" action="register.php">
-			<font color="ffffff">Room Name:</font> <input type="text" name="roomname"><br>
-			<font color="ffffff">Room Key:</font> <input type="password" name="roomkey"><br>
-			<font color="ffffff">Capacity:</font> <input type="number" name="capacity" min="1" max="9">
+			<font>Room Name:</font> <input type="text" name="roomname"><br>
+			<font>Room Key:</font> <input type="password" name="roomkey"><br>
+			<font>Capacity:</font> <input type="number" name="capacity" min="1" max="9">
 			<input type="submit" name="submit" value="Create">
 	</form>
 	</center>

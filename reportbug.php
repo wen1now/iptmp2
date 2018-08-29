@@ -7,7 +7,11 @@ session_start();
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="titlestuff">Critical Miss: Report a bug</div>
+<<<<<<< HEAD
+	<div id="titlestuff">Report a bug</div>
+=======
+	<div id="titlestuff">Report A Bug</div>
+>>>>>>> f37a0d7121234906aa950bbe2dd9eade331eb4be
 	<?php
 	if (isset($_SESSION['userid'])){
 		include('menuitems.php');
@@ -17,6 +21,6 @@ session_start();
 	?>
 	<center>
 	"It can take a site a while to figure out that there's a problem with their 'report a bug' form."<br>-- Randall Munroe<br><br>
-	<img src="images/problem_reporting.png" alt="Italian Trulli"></center>
+	<img src="images/problem_reporting.png" alt="Problem reporting"></center>
 </body>
 </html>

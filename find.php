@@ -10,7 +10,7 @@ session_start();
 	<?php
 	if (isset($_SESSION['userid'])){
 		$username = $_SESSION['userid'];
-		echo '<div id="titlestuff">Critical Miss: Room select</font></div>';
+		echo '<div id="titlestuff">Room select</font></div>';
 		include('menuitems.php');
 		/*echo '<h2>Critical Miss: Menu</font></h2></div>
 		<div id="leftbar">
@@ -22,7 +22,7 @@ session_start();
 		';*/
 	} else {
 		//redirect user to login
-		$message = "You are not logged in; login or register to view this page";
+		$message = "You are not logged in; login to view this page";
 		echo "<script type='text/javascript'>alert('".$message."');window.location.href='login.php';</script>";
 		}
 	?>
