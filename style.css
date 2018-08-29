@@ -1,0 +1,64 @@
+body {
+    background-image: url("images/bgroundtiles.jpg");
+    color: #eee;
+	font-family: "helvetica",serif;
+}
+
+#leftbar {
+	position: fixed;
+	left: 30px;
+	top: 0px;
+	bottom: 0px;
+	width: 300px;
+	background-color: #333;
+	padding: 5px;
+	padding-top: 20px;
+}
+
+.menuitem {
+	width: 294px;
+	height: 30px;
+	background-color: #333;
+	-o-transition:.7s;
+    -ms-transition:.7s;
+	-moz-transition:.7s;
+	-webkit-transition:.7s;
+	transition:.7s;
+	cursor:pointer;
+	text-align: center;
+	font-size: 20px;
+	vertical-align: bottom;
+	border: 3px #333 solid;
+	border-top: none;
+	border-radius: 10px;
+}
+
+.menuitem:hover {
+	background-color: #aee;
+	color: black;
+}
+
+#titlestuff {
+	left: 350px;
+	position: relative;
+	float: center;
+	clear: left;
+	text-align: center;
+	width: calc(100% - 350px);
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+#mainarea {
+	position: absolute;
+	float: left;
+	clear: both;
+	left: 380px;
+	font-size: 16px;
+	width: calc(100% - 410px);
+}
+
+.preformatted {
+	font-family: monospace;
+}

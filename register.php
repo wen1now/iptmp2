@@ -5,18 +5,22 @@ session_start()
 <html>
 <head>
 	<title>Register</title>
-	<style> 
-body {
-    background-image: url("images/bgroundtiles.jpg");
-}
-</style>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div id="titlestuff">Critical Miss: Register</div>
+<?php
+	if (isset($_SESSION['userid'])){
+		include('menuitems.php');
+	} else {
+		include('menuitemsnotloggedin.php');
+		}
+?>
 	<center>
-	<h2><font color="ffffff">Critical Miss: REGISTER</font></h2>
 	<form name="letmein" method="post" action="register.php">
-		<font color="ffffff">Username:</font> <input type="text" name="username"><br>
-		<font color="ffffff">Password:</font> <input type="password" name="password"><br>
+		<span class="preformatted">Username:</span><input type="text" name="username"><br>
+		<span class="preformatted">Password:</span><input type="password" name="password"><br>
 		<input type="submit" name="submit">
 	</form>
 <?php
@@ -38,10 +42,10 @@ if (isset($_POST['submit'])){
 		.'","ffffff","default.jpg")';//insert picture filepath
 
 	//execute
+	/////!!!!!!!!!!!!!!!!!!!!!!!!!!!---make sure no such username already exists
 	if (mysqli_query($connection,$qry))
    		{ echo 'Registration successful';
-   		$_session['username'] = $username;
-   		header("LOCATION: menu.php");}
+   		header("LOCATION: login.php");}
 	else
    		{ echo 'Error detected; please try again - '.mysqli_error(); }
 

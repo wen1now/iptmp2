@@ -1,16 +1,16 @@
 <?php
-session_start()
-?>
-
+session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
-
 <link rel="stylesheet" href="style.css">
-<center>
+</head>
+<body>
 	<?php
 	if (isset($_SESSION['userid'])){
-		echo '<div id="titlestuff"><h2>Critical Miss: Room select</font></h2></div>';
+		$username = $_SESSION['userid'];
+		echo '<div id="titlestuff">Critical Miss: Room select</font></div>';
 		include('menuitems.php');
 		/*echo '<h2>Critical Miss: Menu</font></h2></div>
 		<div id="leftbar">
@@ -21,7 +21,9 @@ session_start()
 			<div class="menuitem" onclick="location.href=\'reportbug.php\';">Report a bug</div>
 		';*/
 	} else {
-		include('menuitemsnotloggedin.php');
+		//redirect user to login
+		$message = "You are not logged in; login or register to view this page";
+		echo "<script type='text/javascript'>alert('".$message."');window.location.href='login.php';</script>";
 		}
 	?>
 

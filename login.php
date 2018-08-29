@@ -5,18 +5,30 @@ session_start()
 <html>
 <head>
 	<title>Log in</title>
-	<style> 
-body {
-    background-image: url("images/bgroundtiles.jpg");
-}
-</style>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div id="titlestuff">Critical Miss: Login</font></div>
+	<?php
+	if (isset($_SESSION['userid'])){
+		include('menuitems.php');
+		/*echo '<h2>Critical Miss: Menu</font></h2></div>
+		<div id="leftbar">
+			<div class="menuitem" onclick="location.href=\'logout.php\';" id="topmenuitem" >Logout</a></div>
+			<div class="menuitem" onclick="location.href=\'create.php\';">Create room</div>
+			<div class="menuitem" onclick="location.href=\'find.php\';">Find room</div>
+			<div class="menuitem" onclick="location.href=\'about.php\';">About</div>
+			<div class="menuitem" onclick="location.href=\'reportbug.php\';">Report a bug</div>
+		';*/
+	} else {
+		include('menuitemsnotloggedin.php');
+		}
+	?>
 <center>
-	<h2><font color="ffffff">Critical Miss: LOGIN</font> </h2>
 	<form name="letmein" method="post" action="login.php">
-		<font color="ffffff">Username:</font> <input type="text" name="username"><br>
-		<font color="ffffff">Password:</font> <input type="password" name="password"><br>
+		<span class="preformatted">Username:</span><input type="text" name="username"><br>
+		<span class="preformatted">Password:</span><input type="password" name="password"><br>
 		<input type="submit" value="Log In" name="submit">
 	</form>
 
@@ -38,9 +50,8 @@ if (isset($_POST['submit'])){
 	$data = mysqli_query($connection,$qry);
 	if (mysqli_num_rows($data) != 0)
    		{
-   		echo mysqli_fetch_row($data)[0];
-   		$_SESSION["username"] = $_POST["username"];
-   		header("LOCATION: menu.php");}
+   		$_SESSION["userid"] = mysqli_fetch_row($data)[0];
+   		header("LOCATION: find.php");}
 	else
    		{ echo 'Either your username or password was incorrect :('; }
 
