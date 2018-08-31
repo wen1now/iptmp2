@@ -15,7 +15,7 @@ $qry = 'select * from users where user in (select userid from characters where r
 $userslist = mysqli_query($connection,$qry);
 while list($col1,$col2,$col3,$col4,$col5) = mysql_fetch_row($userslist)
 	{	
-		echo('<h4><font color ="'.$col4.'">'.$col3.'</font><h4>');
+		echo('<h4><font color ="'.$col4.'">'.$col3.'</font><h4><br>');
 	}
 
 
