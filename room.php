@@ -25,9 +25,17 @@ $qry = 'select * from users where user in (select userid from characters where r
 $userslist = mysqli_query($connection,$qry);
 while list($col1,$col2,$col3,$col4,$col5) = mysql_fetch_row($userslist)
 	{	
-		echo('<h4><font color ="'.$col4.'">'.$col3.'</font><h4><br>');
+		echo('<h4><font color ="'.$col4.'">'.$col3.'</font></h4><br>');
 	}
 
+$qry = 'select displayname,textcolour,send_date,blurb from messages,aliases where room = "'
+		.$room.'" and messages.alias = aliases.aliasid order by send_date'
+
+$messagelist = mysqli_query($connection,$qry);
+while list($col1,$col2,$col3,$col4) = mysql_fetch_row($messagelist)
+	{
+		echo('<h4><font color ="'.$col3.'">'.$col1.' said '.$col4.' on '.$col3.'</font></h4><br>')
+	}
 
  ?>
 </body>
