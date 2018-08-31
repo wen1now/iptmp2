@@ -34,20 +34,29 @@ if (isset($_POST['submitregister'])){
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	//plateitup
-	$qry = 'insert into Users(username,hash,pointer,picture) values ("'
-		.$username
-		.'","'
-		.$password
-		.'","ffffff","default.jpg")';//insert picture filepath
+	$check = 'select * from Users where username ="'.$username.'"';
 
-	//execute
-	/////!!!!!!!!!!!!!!!!!!!!!!!!!!!---make sure no such username already exists
-	if (mysqli_query($connection,$qry))
-   		{ echo 'Registration successful';
-   		header("LOCATION: login.php");}
-	else
-   		{ echo 'Error detected; please try again - '.mysqli_error(); }
+	$data = mysqli_query($connection,$check);
+	if (mysqli_num_rows($data) == 0)
+   		{
+		$qry = 'insert into Users(username,hash,pointer,picture) values ("'
+				.$username
+				.'","'
+				.$password
+				.'","ffffff","default.jpg")';//insert picture filepath
+
+			//execute
+			/////!!!!!!!!!!!!!!!!!!!!!!!!!!!---make sure no such username already exists
+			if (mysqli_query($connection,$qry))
+		   		{ echo 'Registration successful';
+		   		header("LOCATION: login.php");}
+			else
+		   		{ echo 'Error detected; please try again - '.mysqli_error(); }
+   		}
+   	else {
+   		echo('Username is already in use, sorry');
+   	}
+	
 
 
 }
