@@ -10,16 +10,7 @@ session_start()
 <center>
 	<?php
 	if (isset($_SESSION['userid'])){
-<<<<<<< HEAD
-		echo '<div id="titlestuff"><h2>Critical Miss</font></h2></div>';
-		echo '<div id="titlestuff">Room select</font></div>';
-=======
-
-		echo '<div id="titlestuff"><h2>Critical Miss</font></h2></div>';
-
-		echo '<div id="titlestuff">Room select</font></div>';
-
->>>>>>> 7fb84893ab1b4c25468849951f80690f207f4c20
+		echo '<div id="titlestuff">Critical Miss</font></div>';
 		include('menuitems.php');
 		/*echo '<h2>Critical Miss: Menu</font></h2></div>
 		<div id="leftbar">
