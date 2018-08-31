@@ -1,5 +1,15 @@
 <?php 
 session_start();
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<?php
 if (!isset($_SESSION['userid'])) or !isset($_SESSION['roomid']) {
 	header('location: find.php');
 } 
@@ -20,13 +30,5 @@ while list($col1,$col2,$col3,$col4,$col5) = mysql_fetch_row($userslist)
 
 
  ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-
 </body>
 </html>
