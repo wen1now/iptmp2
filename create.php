@@ -30,7 +30,7 @@
 		<form name="createroom" method="post" action="create.php">
 			<font>Room Name:</font> <input type="text" name="roomname"><br>
 			<font>Room Key:</font> <input type="password" name="roomkey"><br>
-			<font>Capacity:</font> <input type="number" name="capacity" min="1" max="9">
+			<font>Capacity:</font> <input type="number" name="capacity" min="1" max="9"><br>
 			<input type="submit" name="submitcreate" value="Create">
 	</form>
 	</center>
