@@ -63,3 +63,21 @@ body {
 	font-family: monospace;
 	white-space: pre;
 }
+
+.roomitem {
+	border: 3px #77c solid;
+	border-radius: 2px;
+	margin: 10px;
+	background-color: #111;
+	cursor: pointer;
+	-o-transition:.7s;
+    -ms-transition:.7s;
+	-moz-transition:.7s;
+	-webkit-transition:.7s;
+	width: 400px;
+}
+
+.roomitem:hover {
+	background-color: #cec;
+	color: black;
+}

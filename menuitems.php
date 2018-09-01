@@ -9,7 +9,7 @@ require ('connect.php');
 		}
 echo '
 <div id="leftbar">
-	<div class="menuitem" onclick="location.href=\'profile.php\';">'.$username.'</div>
+	<div class="menuitem" onclick="location.href=\'profile.php\';">Welcome, '.$username.'</div>
 	<div class="menuitem" onclick="location.href=\'create.php\';">Create room</div>
 	<div class="menuitem" onclick="location.href=\'find.php\';">Find room</div>
 	<div class="menuitem" onclick="location.href=\'about.php\';">About</div>

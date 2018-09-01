@@ -25,8 +25,11 @@ session_start();
 		}
 	if (isset($_POST['submitfind'])){
 		$roomid = $_POST['roomid'];
+		if ($roomid==''){
+			$qry = 'select username,roomname,roomid from Rooms,Users where Rooms.owner = Users.userid limit 10';
+		} else{
 		$qry = 'select username,roomname,roomid from Rooms,Users where Rooms.owner = Users.userid
-		and roomid = "'.$roomid.'"';
+		and roomid = '.$roomid;}
 
 	} else {
 		$qry = 'select username,roomname,roomid from Rooms,Users where Rooms.owner = Users.userid limit 10';
@@ -35,9 +38,9 @@ session_start();
 	$data = mysqli_query($connection,$qry);
 
 	if (mysqli_num_rows($data) != 0)
-   		{while (list($username, $roomname, $roomid) = mysqli_fetch_row($data)){
+   		{echo "<br><b>Select a room:</b>"; while (list($username, $roomname, $roomid) = mysqli_fetch_row($data)){
    			echo '<div class="roomitem" onclick = "window.location.href=\'room.php?roomid='.$roomid.'\';">
-   			<div class="roomname">'.$roomname.'</div><div class="owner">'.$username.'</div></div>';
+   			<div class="roomname"><b>'.$roomname.'</b></div><div class="owner">Owner: '.$username.'</div></div>';
    		}}
 	else
    		{ echo 'There are no rooms at the moment'; }
