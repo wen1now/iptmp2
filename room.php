@@ -31,7 +31,7 @@ session_start();
 			echo '<h4><font color ="'.$col4.'">'.$col3.'</font></h4><br>' ;
 		}
 
-	$qry = 'select displayname,textcolour,send_date,blurb from messages,aliases where Messages.roomid = '.$room.' and messages.alias = aliases.aliasid order by send_date'
+	$qry = 'select displayname,textcolour,send_date,blurb from messages,aliases where Messages.roomid = '.$room.' and messages.alias = aliases.aliasid order by send_date';
 
 	$messagelist = mysqli_query($connection,$qry);
 	while (list($col1,$col2,$col3,$col4) = mysqli_fetch_row($messagelist))
