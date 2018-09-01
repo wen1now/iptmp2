@@ -45,7 +45,7 @@
 	<?php
 
 
-	if (isset($_POST['submitprofile'])){
+	if (isset($_POST['submitprofile'])){		
 		//user HAS posted data
 		//connect to the db
 		//go get the raw data
@@ -53,13 +53,22 @@
 		$newname = $_POST['newname'];
 
 		//plateitup
+		
+		$check = 'select * from Users where username ="'.$newname.'"';
+
+	$data = mysqli_query($connection,$check);
+	if (mysqli_num_rows($data) == 0)
+   		{
 		$qry = 'update users set username ="'.$newname.'" where userid ="'.$user.'"';
 		if (mysqli_query($connection,$qry))
 		   		{ echo 'Changes saved';
 		   		header("LOCATION: find.php");}
 			else
-		   		{ echo 'Error detected; please try again - '.mysqli_error(); }
-
+		   		{ echo 'Error detected; please try again - '.mysqli_error();  }
+   		}
+   	else {
+   		echo('Username is already in use, sorry');
+   	}
 	}
 	?>
 </body>
