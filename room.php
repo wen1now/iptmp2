@@ -14,20 +14,20 @@ session_start();
 
 		//header('location: find.php');
 	} 
-	echo 'Room id: '.$_GET['roomid'];
+	echo 'Room id: '.$_GET['roomid'].'<br>';
 	$user = $_SESSION['userid'];
 	$room = $_GET['roomid'];
 	require('connect.php');
 
-	$qry = 'select pointer, username from users where user in (select userid from characters where roomid = "'
-		.$room.'")';
+	$qry = 'select pointer, username from users where userid in (select userid from characters where roomid = '
+		.$room.')';
 
 
 	//this displays all users within the room in the colour they have chosen as their pointer
 	$userslist = mysqli_query($connection,$qry);
 	while (list($col1,$col2) = mysqli_fetch_row($userslist))
 		{	
-			echo '<h4><font color ="'.$col1.'">'.$col2.'</font></h4><br>' ;
+			echo '<font color ="'.$col1.'">'.$col2.'</font>, ' ;
 		}
 
 	$qry = 'select displayname,textcolour,send_date,blurb from messages,aliases where Messages.roomid = '.$room.' and messages.alias = aliases.aliasid order by send_date';

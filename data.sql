@@ -15,3 +15,9 @@ values ('1','1','0','0','default.jpg'),
 ('3','3','0','0','default.jpg'),
 ('1','2','0','0','default.jpg'),
 ('3','1','0','0','default.jpg');
+
+insert into aliases(displayname, textcolour, roomid, owner) 
+values ('Billy', 'ff0000', 1, 1);
+
+insert into messages(roomid, userid, alias, send_date, blurb)
+values (1,1,0,'20180902', 'hi')
