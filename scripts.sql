@@ -32,7 +32,7 @@ create table Characters (
 );
 
 create table Boardimages (
-	imageid integer unsigned not null,
+	imageid integer unsigned auto_increment not null,
 	roomid integer unsigned not null,
 	owner integer unsigned not null,
 	stack_order integer not null,
@@ -46,7 +46,7 @@ create table Boardimages (
 );
 
 create table Messages (
-	messageid integer unsigned not null,
+	messageid integer unsigned auto_increment not null,
 	roomid integer unsigned not null,
 	userid integer unsigned not null,
 	alias varchar(31) not null,
@@ -58,7 +58,7 @@ create table Messages (
 );
 
 create table Aliases (
-	aliasid integer unsigned not null,
+	aliasid integer unsigned auto_increment not null,
 	displayname varchar(31) not null,
 	textcolour varchar(6) not null,
 	roomid integer unsigned not null,
@@ -69,7 +69,7 @@ create table Aliases (
 );
 
 create table Notes (
-	noteid integer unsigned not null,
+	noteid integer unsigned auto_increment not null,
 	title varchar(31) not null,
 	private bit not null,
 	blurb text not null,
