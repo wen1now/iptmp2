@@ -10,6 +10,35 @@ session_start();
 </head>
 <body>
 <?php
+	/*
+	if (isset($_POST['submitcreate'])){
+		//user HAS posted data
+		//connect to the db
+		require ('connect.php');
+		//go get the raw data
+		$user = $_SESSION['userid'];
+		$message = $_POST['message'];
+		$roomkey = $_POST['alias'];
+
+		//check alias is valid
+
+		//plateitup
+		$qry = 'insert into Rooms(owner,roomname,keyphrase,capacity) values ("'
+			.$owner
+			.'","'
+			.$roomname
+			.'","'
+			.$roomkey
+			.'","'
+			.$capacity
+			.'")';
+
+		//execute
+		if (mysqli_query($connection,$qry))
+	   		{ echo '';}
+		else
+	   		{ echo 'Error detected; please try again - '.mysqli_error(); }*/
+
 	if ((!isset($_SESSION['userid'])) or (!isset($_GET['roomid']))) {
 
 		//header('location: find.php');
@@ -39,5 +68,11 @@ session_start();
 		}
 
  ?>
+ 	<form name="sendmessage" method="post" action ="room.php">
+ 		Send<input type="text" name="message">as:<input type="text" name="alias">
+ 		<input type="submit" name="submitmessage" value="send">
+ 	</form>
+
+
 </body>
 </html>
