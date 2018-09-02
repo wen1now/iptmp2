@@ -11,7 +11,8 @@ session_start();
 <link rel="stylesheet" href="roomstyle.css">
 </head>
 <body>
-	Protip: click and drag the top of the windows to reposition them
+<div id="back" onclick="window.location.href='find.php'"><- Back</div>
+<div>Protip: click and drag the top of the windows to reposition them</div>
 <?php
 	/*
 	if (isset($_POST['submitcreate'])){

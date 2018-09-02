@@ -22,3 +22,17 @@ body {
 	background-color: #acf;	
 }
 
+#back {
+	background-color: #f33;
+	border: 1px #d99 solid;
+	color: #222;
+	border-radius: 2px;
+	width: 80px;
+	cursor: pointer;
+	text-align: center;
+}
+
+#back:active {
+	background-color: #d11;
+
+}
