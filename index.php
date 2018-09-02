@@ -24,6 +24,10 @@ session_start()
 		include('menuitemsnotloggedin.php');
 		}
 	?>
+	<p>
+		Hi there!<br>
+		<- Navigate the site using the menu bar located to the left. 'About' will give a general description of what this site is about.
+		
 
 </body>
 </html>
