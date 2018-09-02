@@ -73,7 +73,7 @@ session_start();
 			.')';
 			mysqli_query($connection,$qry);
 
-		} else {echo "Invalid alias; view the aliases window for ones that you may use.";}
+		} 
 
 
 		//plateitup
