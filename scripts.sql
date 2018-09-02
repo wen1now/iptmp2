@@ -32,7 +32,7 @@ create table Characters (
 );
 
 create table Boardimages (
-	imageid integer unsigned not null,
+	imageid integer unsigned auto_increment not null,
 	roomid integer unsigned not null,
 	owner integer unsigned not null,
 	stack_order integer not null,

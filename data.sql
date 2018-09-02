@@ -20,4 +20,4 @@ insert into aliases(displayname, textcolour, roomid, owner)
 values ('Billy', 'ff0000', 1, 1);
 
 insert into messages(roomid, userid, alias, send_date, blurb)
-values (1,1,0,'20180902', 'hi')
+values (1,1,1,'20180902', 'hi')
