@@ -46,11 +46,11 @@ create table Boardimages (
 );
 
 create table Messages (
-	messageid integer unsigned not null,
+	messageid integer unsigned auto_increment not null,
 	roomid integer unsigned not null,
 	userid integer unsigned not null,
 	alias varchar(31) not null,
-	send_date date not null,
+	send_date datetime not null,
 	blurb text not null,
 	primary key(messageid),
 	foreign key(userid) references Users(userid),
@@ -58,7 +58,7 @@ create table Messages (
 );
 
 create table Aliases (
-	aliasid integer unsigned not null,
+	aliasid integer unsigned auto_increment not null,
 	displayname varchar(31) not null,
 	textcolour varchar(6) not null,
 	roomid integer unsigned not null,
@@ -69,7 +69,7 @@ create table Aliases (
 );
 
 create table Notes (
-	noteid integer unsigned not null,
+	noteid integer unsigned auto_increment not null,
 	title varchar(31) not null,
 	private bit not null,
 	blurb text not null,

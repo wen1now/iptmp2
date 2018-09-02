@@ -4,13 +4,17 @@ body {
 	overflow: hidden;
 }
 
+.small {
+	font-size: 12px;
+}
+
 .drag {
 	color: black;
 	height: 400px;
 }
 
 .users {
-	background-color: #422;
+	background-color: #452;
 	color: #fff;
 	border-color: #aaa;
 }
@@ -21,6 +25,16 @@ body {
 
 .messages {
 	background-color: #acf;	
+}
+
+.aliases {
+	background-color: #111;
+	color: #fff;
+	border-color: #aaa;
+}
+
+.aliases .topbar {
+	border-color: #aaa;
 }
 
 #back {
@@ -36,4 +50,17 @@ body {
 #back:active {
 	background-color: #d11;
 
+}
+
+#sendmessage {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+}
+
+#messagelist {
+	bottom: 100px;
+	height: 250px;
+	overflow-y: auto;
+	position: absolute;
 }
