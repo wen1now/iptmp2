@@ -1,0 +1,24 @@
+body {
+	background-color: #333;
+	color: #eee;
+}
+
+.drag {
+	color: black;
+	height: 400px;
+}
+
+.users {
+	background-color: #422;
+	color: #fff;
+	border-color: #aaa;
+}
+
+.users .topbar {
+	border-color: #aaa;
+}
+
+.messages {
+	background-color: #acf;	
+}
+
