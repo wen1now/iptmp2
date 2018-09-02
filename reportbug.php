@@ -17,6 +17,8 @@ session_start();
 	?>
 	<center>
 	"It can take a site a while to figure out that there's a problem with their 'report a bug' form."<br>-- Randall Munroe<br><br>
-	<img src="images/problem_reporting.png" alt="Problem reporting"></center>
+	<img src="images/problem_reporting.png" alt="Problem reporting"><br><br>
+	<img src="images/bobby.png" alt="Please don't do this" title="Please don't do this">
+</center>
 </body>
 </html>
