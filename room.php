@@ -71,7 +71,7 @@ session_start();
 	$qry = 'select displayname,textcolour,username from Aliases,Users where aliases.owner = Users.userid and roomid = '.$room;
 
 	echo('aliases:<br>');
-	$aliaslist = mysql_query($connection,$qry);
+	$aliaslist = mysqli_query($connection,$qry);
 	while (list($col1,$col2,$col3) = mysqli_fetch_row($aliaslist))
 		{
 			echo '<h4><font color ="'.$col2.'">'.$col3.' as '.$col1.'</font></h4>';
