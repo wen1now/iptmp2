@@ -35,18 +35,6 @@ session_start();
 		}
 	echo '</div>';
 
-	$qry = 'select displayname,textcolour,send_date,blurb,username from messages,aliases,users where Messages.roomid = '.$room.' and Messages.roomid = aliases.roomid and users.userid = aliases.owner order by send_date desc limit 20';
-
-	echo('<div class="drag messages" onmousedown="totop(this)" style="left:50px;top:40px"><div class="topbar"><b>Messages:</b></div>');
-	$messagelist = mysqli_query($connection,$qry);
-	echo '<div id="messagelist">';
-	while (list($col1,$col2,$col3,$col4,$col5) = mysqli_fetch_row($messagelist))
-		{
-			echo '<font color ="'.$col2.'">'.$col4.' <span class="small">'.$col1.' as '.$col5.', '.$col3.'</span></font><br>';
-		}
-	echo '</div>';
-
-
 	if (isset($_POST['submitmessage']) and $_POST['message']!=''){
 		//user HAS posted data
 		//connect to the db
@@ -94,6 +82,19 @@ session_start();
 		else
 	   		{ echo 'Unfortunately that is not a valid alias; check the available aliases (above) for a valid one'; }
 	  }
+
+	$qry = 'select displayname,textcolour,send_date,blurb,username from messages,aliases,users where Messages.roomid = '.$room.' and Messages.roomid = aliases.roomid and users.userid = aliases.owner and Messages.userid = users.userid order by send_date desc limit 20';
+
+	echo('<div class="drag messages" onmousedown="totop(this)" style="left:50px;top:40px"><div class="topbar"><b>Messages:</b></div>');
+	$messagelist = mysqli_query($connection,$qry);
+	echo '<div id="messagelist">';
+	while (list($col1,$col2,$col3,$col4,$col5) = mysqli_fetch_row($messagelist))
+		{
+			echo '<font color ="'.$col2.'">'.$col4.' <span class="small">'.$col1.' as '.$col5.', '.$col3.'</span></font><br>';
+		}
+	echo '</div>';
+
+
 	echo '
  	<div id="sendmessage">
  	<form name="sendmessage" method="post" action ="">
